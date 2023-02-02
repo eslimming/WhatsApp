@@ -576,7 +576,7 @@ namespace ConsolaWhatsApp
         private void SQL_GetMessage()
         {
 
-            string queryString = "SELECT Top 1 cast(id as varchar) as id,cast(Grupo as varchar) as Grupo,Mensaje FROM [dbo].[Mensajes] WHERE Estado=0 AND DT>GETDATE()-0.125 and Grupo in (7,8,10,11,12,13,14,18,19,21,22,31,32) ORDER BY id";
+            string queryString = "SELECT Top 1 cast(id as varchar) as id,cast(Grupo as varchar) as Grupo,Mensaje FROM [dbo].[Mensajes] WHERE Estado=0 AND DT>GETDATE()-0.125 ORDER BY id";
             id = "0";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
